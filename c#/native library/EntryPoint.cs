@@ -44,7 +44,7 @@ namespace ArmaDotNetCore
         [UnmanagedCallersOnly(EntryPoint = "RVExtensionVersion")]
         public static void RVExtensionVersion(IntPtr output, int outputSize)
         {
-            string greetingsString = "Greetings from C#! || .net core example" + Environment.NewLine + "If you see this the extension has been loaded";
+            string greetingsString = "|Arma .Net Core Sample|";
             
             string finalString = greetingsString + char.MinValue;
 
