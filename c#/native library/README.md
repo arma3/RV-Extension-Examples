@@ -30,5 +30,9 @@ Keep in mind to add the _x64 suffix, as this is a 64bit extension!
 ## Why to use?
 Obviously this won't never run faster than native c/c++ code. The only thing you'll really get, is that you'll be able to compile an extension for both windows and linux without touching in any ways your code. Which for Server sided extensions , is probably (?) very useful. 
 
+## Notes
+- using '-c Release' flag while compiling will drastically reduce dll/so size
+- sometimes compiling will take a lot of time
+
 
 > Written with [StackEdit](https://stackedit.io/).
