@@ -1,12 +1,12 @@
 # What is this?
-A template project for writing Arma 3 extensions in .Net Core, using ILCompiler provided by CoreRT
+A template project for writing Arma 3 extensions in .NET Core, using ILCompiler provided by CoreRT
 
 # Author
 CoreRT https://github.com/dotnet/corert
 Dardo https://github.com/DardoTheMaster
 
 ## How to Setup
-1) Install DotNet core sdk and dependencies from Microsoft website ( https://dotnet.microsoft.com/download )
+1) Install .NET Core SDK and dependencies from Microsoft website ( https://dotnet.microsoft.com/download )
 
 2) Open a terminal in the project directory
 

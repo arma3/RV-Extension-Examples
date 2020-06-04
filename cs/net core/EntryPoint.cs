@@ -50,7 +50,7 @@ namespace ArmaDotNetCore
         /// <param name="outputSize">An integer that determines the maximum lenght of the array</param>
         public static void RVExtensionVersion(IntPtr output, int outputSize)
         {
-            string greetingsString = "|Arma .Net Core Sample|"; //String that will get printed on RPT logs
+            string greetingsString = "|Arma .NET Core Sample|";
             
             string finalString = greetingsString + '\0';
 
