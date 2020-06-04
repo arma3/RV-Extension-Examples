@@ -44,7 +44,8 @@ namespace ArmaDotNetCore
         [UnmanagedCallersOnly(EntryPoint = "RVExtensionVersion")]
         public static void RVExtensionVersion(IntPtr output, int outputSize)
         {
-            string greetingsString = "|Arma .Net Core Sample|";
+            string greetingsString = "|Arma .NET Core Sample|";
+
             
             string finalString = greetingsString + char.MinValue;
 
