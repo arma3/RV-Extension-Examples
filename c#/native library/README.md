@@ -1,5 +1,5 @@
 # What is this?
-A template project for writing Arma 3 extensions in .Net Core, using ILCompiler provided by CoreRT
+A template project for writing Arma 3 extensions in .NET Core, using ILCompiler provided by CoreRT
 
 # Author
 CoreRT https://github.com/dotnet/corert
