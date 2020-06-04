@@ -10,4 +10,4 @@ See https://community.bistudio.com/wiki?title=Extensions
 3. Create a folder that briefly describes your project (for example `/cpp/file-writer/`)
 4. Add a `README.md` file describing your project in depth, containing the actual author, setup requirements etc.
 5. Create a Pull-Request
-6. Feel good that you contributed the ArmA community :)
+6. Feel good that you contributed the Arma community :)
