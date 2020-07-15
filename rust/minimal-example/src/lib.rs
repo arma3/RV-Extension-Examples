@@ -111,3 +111,4 @@ unsafe fn write_str_to_ptr(string: &str, ptr: *mut c_char, buf_size: size_t) -> 
     ptr.add(amount_to_copy).write(0x00);
     Some(amount_to_copy)
 }
+
