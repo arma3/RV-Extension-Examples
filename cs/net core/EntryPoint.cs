@@ -7,6 +7,15 @@ namespace ArmaDotNetCore
 {
     public class ArmaExtension
     {
+        //You can call back to Arma by using Callback(string name, string function, string data);
+        public static unsafe delegate* unmanaged<string, string, string, int> Callback;
+        
+        [UnmanagedCallersOnly(EntryPoint = "RVExtensionRegisterCallback")]
+        public static unsafe void RvExtensionRegisterCallback(delegate* unmanaged<string, string, string, int> callback)
+        {
+            Callback = callback;
+        }
+        
         //This tells the compiler to create an entrypoint named 'RVExtension'. This line should be added
         // to each method you want to export. Only public static are accepted.
         [UnmanagedCallersOnly(EntryPoint = "RVExtension")]
