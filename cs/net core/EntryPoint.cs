@@ -7,6 +7,15 @@ namespace ArmaDotNetCore
 {
     public class ArmaExtension
     {
+        //You can call back to Arma by using Callback(string name, string function, string data);
+        public static unsafe delegate* unmanaged<string, string, string, int> Callback;
+        
+        [UnmanagedCallersOnly(EntryPoint = "RVExtensionRegisterCallback")]
+        public static unsafe void RvExtensionRegisterCallback(delegate* unmanaged<string, string, string, int> callback)
+        {
+            Callback = callback;
+        }
+        
         //This tells the compiler to create an entrypoint named 'RVExtension'. This line should be added
         // to each method you want to export. Only public static are accepted.
         [UnmanagedCallersOnly(EntryPoint = "RVExtension")]
@@ -19,7 +28,7 @@ namespace ArmaDotNetCore
         /// <param name="output">A pointer to the memory location of a chars array that will be read after issuing callExtension command</param>
         /// <param name="outputSize">An integer that determines the maximum lenght of the array</param>
         /// <param name="function">A pointer to the string passed from arma</param>
-        public unsafe static void RVExtension(char* output, int outputSize, char* function)
+        public static unsafe void RVExtension(char* output, int outputSize, char* function)
         {
             //Let's grab the string from the pointer passed from the Arma call to our extension
             //Note the explicit cast
@@ -55,7 +64,7 @@ namespace ArmaDotNetCore
         /// <param name="argv">An array of pointers (char**). IE: A pointer to a memory location where pointers are stored(Still, can't be casted to IntPtr)</param>
         /// <param name="argc">Integer that points how many arguments there are in argv</param>
 
-        public unsafe static void RVExtensionArgs(char* output, int outputSize, char* function, char** argv, int argc)
+        public static unsafe void RVExtensionArgs(char* output, int outputSize, char* function, char** argv, int argc)
         {
             //Let's grab the string from the pointer passed from the Arma call to our extension
             //Note the explicit cast
@@ -94,7 +103,7 @@ namespace ArmaDotNetCore
         /// <param name="output">A pointer to the memory location of a chars array that will be read after the load of the extension.</param>
         /// <param name="outputSize">An integer that determines the maximum lenght of the array</param>
  
-        public unsafe static void RVExtensionVersion(char* output, int outputSize)
+        public static unsafe void RVExtensionVersion(char* output, int outputSize)
         {
             string greetingsString = "|Arma .NET Core Sample|";
             
